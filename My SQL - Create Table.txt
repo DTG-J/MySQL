@@ -34,3 +34,8 @@ SELECT * FROM employees;
     first_name VARCHAR (50),
     last_name VARCHAR (50)
     );
+
+SELECT * FROM employees;
+    
+    ALTER TABLE employees
+    ADD COLUMN  salary DECIMAL;

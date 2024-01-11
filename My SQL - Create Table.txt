@@ -4,6 +4,10 @@ CREATE TABLE employees(
     last_name 	VARCHAR (50) NOT NULL
     );
 
+ SELECT first_name, last_name
+    FROM employees
+    LIMIT 2;
+
  CREATE TABLE categories(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR (50) NOT NULL    

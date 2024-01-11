@@ -8,6 +8,9 @@ CREATE TABLE employees(
     FROM employees
     LIMIT 2;
 
+  INSERT INTO employees VALUES ( 
+    10, "Query", NULL);
+
  CREATE TABLE categories(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR (50) NOT NULL    

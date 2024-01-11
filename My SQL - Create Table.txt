@@ -39,3 +39,6 @@ SELECT * FROM employees;
     
     ALTER TABLE employees
     ADD COLUMN  salary DECIMAL;
+
+ ALTER TABLE employees
+    ADD COLUMN middle_name VARCHAR (50); 

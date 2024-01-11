@@ -11,6 +11,11 @@ CREATE TABLE employees(
   INSERT INTO employees VALUES ( 
     10, "Query", NULL);
 
+INSERT INTO employees (first_name, last_name) 
+    VALUES 	("Gosho", "Tosho"),
+			("Ivan", "Ivanow"),
+			("Petar", "Petrov");
+
  CREATE TABLE categories(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR (50) NOT NULL    

@@ -45,3 +45,8 @@ SELECT * FROM employees;
 
  ALTER TABLE employees
     MODIFY COLUMN middle_name VARCHAR (100); 
+
+ ALTER TABLE products
+    ADD CONSTRAINT fk_category_id
+	FOREIGN KEY (category_id)
+    REFERENCES categories (id); 

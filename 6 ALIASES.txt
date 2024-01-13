@@ -1,0 +1,7 @@
+#ALIASES 
+SELECT e.id AS 'No',
+e.first_name AS 'First Name',
+e. last_name AS 'Last Name', 
+e. job_title AS 'Job Title'
+FROM employees AS e 
+ORDER BY id; 

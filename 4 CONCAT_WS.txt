@@ -1,0 +1,5 @@
+SELECT `id` AS 'No',
+CONCAT_WS (' ', `first_name`, `last_name`, `job_title`)
+ AS 'full_name',
+`job_title` AS 'Job Title'
+FROM employees; 

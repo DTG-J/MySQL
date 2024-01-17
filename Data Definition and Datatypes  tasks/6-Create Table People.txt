@@ -1,0 +1,17 @@
+CREATE TABLE people (
+    id INT UNIQUE AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(200) NOT NULL,
+    picture BLOB,
+    height DOUBLE(6 , 2 ),
+    weight DOUBLE(5 , 2 ),
+    gender CHAR(1) NOT NULL,
+    birthdate DATE NOT NULL,
+    biography BLOB
+);
+
+INSERT INTO people (name, picture, height, weight, gender, birthdate, biography)VALUES 
+('Petar',  'test', 1.85, 73.28, 'm', '1976-10-05', 'test'),
+('Ivan',  'test', 1.65, 89.5, 'm', '1980-06-06', 'test'),
+('Todor',  'test', 1.45, 66.4, 'm', '1990-04-11', 'test'),
+('Georgi',  'test', 1.75, 76.9, 'm', '1994-03-15', 'test'),
+('Maria',  'test', 1.95, 64.76, 'f', '1999-02-22', 'test');

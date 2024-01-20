@@ -13,4 +13,14 @@ category_id	Average Price	Cheapest Product	Most Expensive Product
 4					12.79			11.69			13.69
 5					5.37			4.90			5.60
 */
-SELECT 
+SELECT category_id,
+ROUND(AVG (price), 2) AS 'Average price',
+ROUND (MIN(price), 2) AS 'Cheapest Product', 
+MAX(price) AS 'Most Expensive Product'
+FROM products 
+group by category_id;
+
+
+
+
+

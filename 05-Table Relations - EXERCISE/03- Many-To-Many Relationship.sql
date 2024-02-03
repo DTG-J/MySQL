@@ -1,0 +1,53 @@
+# 03- Many-To-Many Relationship 
+/* Create three tables as follows. Use appropriate data types.
+exams
+exam_id	name
+101	Spring MVC
+102	Neo4j
+103	Oracle 11g
+students
+student_id	name
+1  	Mila                                      
+2	Toni
+3	Ron
+
+students_exams
+student_id	exam_id
+1	101
+1	102
+2	101
+3	103
+2	102
+2	103
+
+Insert the data from the example above.
+•	Add primary and foreign keys.
+•	Have in mind that the table student_exams should have a 
+composite primary key.
+Submit your queries by using "MySQL run queries & check DB" strategy.
+*/
+CREATE TABLE exams (
+exam_id INT  AUTO_INCREMENT PRIMARY KEY, 
+name VARCHAR (50)) AUTO_INCREMENT=101;
+
+INSERT INTO exams (name) 
+VALUES ('Spring MVC'), ( 'Neo4j'), ('Oracle 11g'); 
+
+CREATE TABLE students (
+student_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY, 
+name VARCHAR (50));
+
+INSERT INTO students (student_id, name) 
+VALUES ('1', 'Mila'), ('2', 'Toni'), ('3', 'Ron');
+
+CREATE TABLE students_exams (
+student_id INT,
+exam_id INT,
+PRIMARY KEY (student_id, exam_id),
+FOREIGN KEY (student_id) REFERENCES students (student_id), 
+FOREIGN KEY (exam_id) REFERENCES exams (exam_id));
+
+INSERT INTO students_exams (student_id, exam_id) 
+VALUES ('1', '101'), ('1', '102'), ('2', '101'), 
+('3', '103'), ('2', '102'), ('2', '103');
+
